@@ -6,7 +6,7 @@ Future work is required to complete the written evaluation which will assess whe
 ## Data
 
 The data used to generate the country profiles comes from the [2024 version](https://doi.org/10.5904/wgms-fog-2024-01) of the WGMS database. 
-The data from the [2015 version](https://doi.org/10.5904/wgms-fog-2015-11) of the database is also used in order to compare between the two generations of country profiles.
+The data from the [2015 version](https://doi.org/10.5904/wgms-fog-2015-11) of the database is also used in order to compare between the two generations of country profiles. The data files used can be found in the UZH GIUZ shared space under /group/wgms_guest/2023_GiulioSaibene 
 
 ## Scripts
 
