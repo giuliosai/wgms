@@ -17,5 +17,10 @@ The scripts needed are:
 - *no_of_plots.py*
 - *glacier_area.py*
 
+The Python script *jinja_template.py* uses Jinja to output the plots, variables and any other parameter onto the HTML template.
+
+The HTML template is:
+- *template_country.html*
+
 ## Contact
 Giulio Saibene - saibene.giulio@gmail.com - [Linkedin](www.linkedin.com/in/giulio-saibene-b3a858261)
