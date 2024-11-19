@@ -16,3 +16,6 @@ The Python script uses Jinja to output the plots, variables and any other parame
 The HTML template used is:
 - *template_glacier.html*
 - *index.html*
+
+## Contact
+Giulio Saibene - saibene.giulio@gmail.com - [Linkedin](www.linkedin.com/in/giulio-saibene-b3a858261)
