@@ -1,7 +1,7 @@
 # WGMS - Giulio's repository of tasks and scripts
 
 ## Description
-Here you can find all the information about what I have worked on from Nov 2023 to Dec 2024 at the WGMS. This includes:
+Here you can find all the information about what I have worked on from Nov 2023 to Dec 2024 at the WGMS. The main two tasks I worked on are the Country Profiles and the Glacier Profiles. In each you will find:
 - The necessary input files
 - Scripts
 - Description on how to run each task
