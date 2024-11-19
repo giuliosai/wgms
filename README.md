@@ -11,6 +11,11 @@ I also worked on submitting data to the WGMS database from published scientific 
 1. Clone the repository:
    ```bash
    git clone https://github.com/username/repository.git
+   ```
+
+2. Acquire data from where with what name and put in which path relative in this repository environment
+3. Order of running code
+4. (bonus: transcribe environment I am using (conda -env export something...) 
 
 
 ## Contact
