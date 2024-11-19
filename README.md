@@ -10,5 +10,5 @@ Here you can find all the information about what I have worked on from Nov 2023 
 
 
 ## Contact
-Giulio Saibene - saibene.giulio@gmail.com - [Your LinkedIn](www.linkedin.com/in/giulio-saibene-b3a858261)
+Giulio Saibene - saibene.giulio@gmail.com - [LinkedIn](www.linkedin.com/in/giulio-saibene-b3a858261)
 
