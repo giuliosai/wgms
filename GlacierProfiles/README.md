@@ -32,15 +32,18 @@ The Python script uses Jinja to output the plots, variables and any other parame
 
 Make sure to have the following templates in the The HTML templates used are:
 - *template_glacier.html*
-- *index.html*
+- *template_index.html*
 
 ## Instructions
 1. Install all packages that are used in *glacier_profiles.py*
-2. Download all required data files and name them as in the lists above. Place the files under the /data/ folder in this subfolder of the repository.
-3. Run the *glacier_profiles.py* script.
-4. The first cells are to run the functions used to build the visuals and extract statistics for a given glacier
-5. The cell *Render a glacier profile* can create a single or multiple glacier profile (no index page)
-6. The cell *Render both a glacier profile and the index home page* creates glacier profiles for a given list of glacier IDs and outputs the *glacier_index_data* which then acts as an input to the *generate_glacier_index* function to create the index.html home page
+2. Download all required data files and name them as in the lists above. Place the files under the /data/ folder in this subfolder of the repository
+3. Open the *glacier_profiles.py* script in the preferred IDE application
+4. Set the working directory to the GlacierProfiles folder in this repository
+5. Load the required data files directly from the data subfolder in this repository (where you placed all the downloaded files in previous steps under *Data* section)
+6. The first cells are to run the functions used to build the visuals and extract statistics for a given glacier
+7. Before the rendering jinja template cells I find the list of glacier IDs which have the required data (photo, complete name and MB data) which is then used to output all these glacier profiles
+8. The cell *Render a glacier profile* function takes a single glacier ID as input and outputs a single glacier profile for testing (no index page)
+9. The cell *Render both a glacier profile and the index home page* creates glacier profiles for a given list of glacier IDs and outputs the *glacier_index_data* which then acts as an input to the *generate_glacier_index* function to create the index.html home page
 
 ## Contact
 Giulio Saibene - saibene.giulio@gmail.com - [Linkedin](www.linkedin.com/in/giulio-saibene-b3a858261)
