@@ -30,7 +30,7 @@ The script used to generate the glacier profiles is:
 
 The Python script uses Jinja to output the plots, variables and any other parameter onto the HTML template.
 
-The HTML template used is:
+Make sure to have the following templates in the The HTML templates used are:
 - *template_glacier.html*
 - *index.html*
 
