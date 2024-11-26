@@ -6,10 +6,26 @@ Future work is required to complete the written evaluation which will assess whe
 ## Data
 
 The data used to generate the country profiles comes from the [2024 version](https://doi.org/10.5904/wgms-fog-2024-01) of the WGMS database. 
-The data from the [2015 version](https://doi.org/10.5904/wgms-fog-2015-11) of the database is also used in order to compare between the two generations of country profiles. If the following files are not already in the *data* folder then download:
+The data from the [2015 version](https://doi.org/10.5904/wgms-fog-2015-11) of the database is also used in order to compare between the two generations of country profiles. Download the following files (if not already in *data* folder) and name them as written:
+
+### Data from 2015 database version
+- *WGMS-FoG-2015-11-A-GENERAL-INFORMATION.csv*
+- *WGMS-FoG-2015-11-RR-RECONSTRUCTION-FRONT-VARIATION.csv*
+- *WGMS-FoG-2015-11-E-MASS-BALANCE-OVERVIEW.csv*
+- *WGMS-FoG-2015-11-D-CHANGE.csv*
+
+### Data from 2024 database version
+- *front_variation.csv*
+- *reconstruction_front_variation.csv*
+- *mass_balance.csv*
+- *mass_balance_overview.csv*
+- *change.csv*
+- *glacier.csv*
+
+### Data from other sources already uploaded to *data* folder
 - *country_codes.csv*
-- *glacier_info_2015.csv*
-- 
+- *fog_glacier_area.csv* (Used to calculated national glacier areas)
+- *fog-2015-11-front_variation.csv* (This is the version of the FV table used to generate the 2015 country profiles)
 
 ## Scripts
 
