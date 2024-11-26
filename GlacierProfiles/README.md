@@ -32,9 +32,6 @@ The HTML template used is:
 - *template_glacier.html*
 - *index.html*
 
-## Environment
-Refer to wgms.yml file in GlacierProfiles folder of this repository for environment details including versions of Python and packages.
-
 ## Instructions
 1. Install all packages that are used in *glacier_profiles.py*
 2. Check data file paths and then import all needed data
