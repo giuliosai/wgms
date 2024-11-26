@@ -10,7 +10,7 @@ I also worked on submitting data to the WGMS database from published scientific 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/repository.git
+   git clone https://github.com/giuliosai/wgms_giulio.git
    ```
 
 2. Acquire data from where with what name and put in which path relative in this repository environment
