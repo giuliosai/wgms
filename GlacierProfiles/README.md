@@ -6,12 +6,20 @@ I created individual glacier profiles describing the current state and historica
 
 The data used to generate the country profiles comes from the [2024 version](https://doi.org/10.5904/wgms-fog-2024-01) of the WGMS database. Additional data such as glacier names, countries and investigators is downloaded directly from the DBGate access of the WGMS database. The WGMS outlines are downloaded through the PostgreSQL GIS access of the database. 
 
+### Data needed from WGMS database zip file
+- glacier
+
 ### Data to download from DBGate tables as CSV files
 - glacier
 - glacier_name
 - glacier_photo
 - glacier_country
-- 
+- mass_balance
+- front_variation
+- team_member
+
+### Data to download from GIS access to database
+- wgms_outlines
 
 ## Scripts
 
@@ -23,6 +31,13 @@ The Python script uses Jinja to output the plots, variables and any other parame
 The HTML template used is:
 - *template_glacier.html*
 - *index.html*
+
+## Environment
+Refer to wgms.yml file in GlacierProfiles folder of this repository for environment details including versions of Python and packages.
+
+## Instructions
+1. Install all packages that are used in *glacier_profiles.py*
+2. Check data file paths and then import all needed data
 
 ## Contact
 Giulio Saibene - saibene.giulio@gmail.com - [Linkedin](www.linkedin.com/in/giulio-saibene-b3a858261)
