@@ -4,22 +4,24 @@ I created individual glacier profiles describing the current state and historica
 
 ## Data
 
-The data used to generate the country profiles comes from the [2024 version](https://doi.org/10.5904/wgms-fog-2024-01) of the WGMS database. Additional data such as glacier names, countries and investigators is downloaded directly from the DBGate access of the WGMS database. The WGMS outlines are downloaded through the PostgreSQL GIS access of the database. 
+The data used to generate the country profiles comes from the [2024 version](https://doi.org/10.5904/wgms-fog-2024-01) of the WGMS database. Additional data such as glacier names, countries and investigators is downloaded directly from the DBGate access of the WGMS database. The WGMS outlines are downloaded through the PostgreSQL GIS access of the database. The *country_codes.csv* file is already provided in the data folder for this project. Please download each file and name it as named in the following lists.
 
 ### Data needed from WGMS database zip file
-- glacier
+- glacier.csv
+- state.csv
 
 ### Data to download from DBGate tables as CSV files
-- glacier
-- glacier_name
-- glacier_photo
-- glacier_country
-- mass_balance
-- front_variation
-- team_member
+- glacier.csv
+- glacier_name.csv
+- glacier_photo.csv
+- glacier_country.csv
+- mass_balance.csv
+- front_variation.csv
+- team_member.csv
+- glacier_outline_all.csv
 
 ### Data to download from GIS access to database
-- wgms_outlines
+- wgms_outlines.shp
 
 ## Scripts
 
@@ -34,7 +36,11 @@ The HTML template used is:
 
 ## Instructions
 1. Install all packages that are used in *glacier_profiles.py*
-2. Check data file paths and then import all needed data
+2. Download all required data files and name them as in the lists above. Place the files under the /data/ folder in this subfolder of the repository.
+3. Run the *glacier_profiles.py* script.
+4. The first cells are to run the functions used to build the visuals and extract statistics for a given glacier
+5. The cell *Render a glacier profile* can create a single or multiple glacier profile (no index page)
+6. The cell *Render both a glacier profile and the index home page* creates glacier profiles for a given list of glacier IDs and outputs the *glacier_index_data* which then acts as an input to the *generate_glacier_index* function to create the index.html home page
 
 ## Contact
 Giulio Saibene - saibene.giulio@gmail.com - [Linkedin](www.linkedin.com/in/giulio-saibene-b3a858261)
