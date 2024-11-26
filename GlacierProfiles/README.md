@@ -6,6 +6,13 @@ I created individual glacier profiles describing the current state and historica
 
 The data used to generate the country profiles comes from the [2024 version](https://doi.org/10.5904/wgms-fog-2024-01) of the WGMS database. Additional data such as glacier names, countries and investigators is downloaded directly from the DBGate access of the WGMS database. The WGMS outlines are downloaded through the PostgreSQL GIS access of the database. 
 
+### Data to download from DBGate tables as CSV files
+- glacier
+- glacier_name
+- glacier_photo
+- glacier_country
+- 
+
 ## Scripts
 
 The script used to generate the glacier profiles is:
