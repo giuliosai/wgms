@@ -35,7 +35,7 @@ Make sure to have the following templates in the The HTML templates used are:
 - *template_index.html*
 
 ## Instructions
-1. Install all packages that are used in *glacier_profiles.py*
+1. Make sure you have created the environment from *wgms.yml* if not install all packages that are used in *glacier_profiles.py*
 2. Download all required data files and name them as in the lists above. Place the files under the /data/ folder in this subfolder of the repository
 3. Open the *glacier_profiles.py* script in the preferred IDE application
 4. Set the working directory to the GlacierProfiles folder in this repository
