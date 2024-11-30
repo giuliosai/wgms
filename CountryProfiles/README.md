@@ -53,13 +53,13 @@ The HTML template is:
 5. Set the working directory to the CountryProfiles folder in this repository
 6. Load the required data files directly from the data subfolder in this repository (where you placed all the downloaded files in previous steps under Data section)
 7. Run *key_stats.py*
-8. Open the *glacier_area.py* script in the preferred IDE application (working directory should still be the same)
-9. Load the required data files directly from the data subfolder in this repository (where you placed all the downloaded files in previous steps under Data section)
-10. Run *glacier_area.py*
-11. Repeat Steps 9-10 for *mass_balance.py* and *no_of_plots.py*
-12. Open the *jinja_template.py*
-13. Make sure that in the working directory folder you have the *template_country.html* file
-14. Make sure that the /text/ subfolder exists and contains the *country_profiles_text.csv* file which should be used to fill out all the written elements which are unique for each country (this part of writing the text is yet to be completed)
+8. Repeat Steps 3-7 for *glacier_area.py*, *mass_balance.py* and *no_of_plots.py*
+9. Open the *jinja_template.py*
+10. Make sure that in the working directory folder you have the *template_country.html* file
+11. Make sure that the /text/ subfolder exists and contains the *country_profiles_text.csv* file which should be used to fill out all the written elements which are unique for each country (this part of writing the text is yet to be completed)
+12. Run the output_from_template function cell
+13. Subsequent cell can be run to output all country profiles
+14. Last cell can be run to output a single country profile by choosing a country code as the input
 
 ## Contact
 Giulio Saibene - saibene.giulio@gmail.com - [Linkedin](www.linkedin.com/in/giulio-saibene-b3a858261)
