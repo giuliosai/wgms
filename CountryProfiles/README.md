@@ -47,7 +47,7 @@ The HTML template is:
 
 ## Instructions
 
-1. Make sure you have created the environment from wgms.yml if not install all packages that are used in glacier_profiles.py
+1. Make sure you have created the environment from wgms.yml if not install all packages that are used in the scripts for this project.
 2. Download all required data files and name them as in the lists above. Place the files under the /data/ folder in this subfolder of the repository
 3. Open the *key_stats.py* script in the preferred IDE application
 5. Set the working directory to the CountryProfiles folder in this repository
