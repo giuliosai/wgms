@@ -24,22 +24,42 @@ The data from the [2015 version](https://doi.org/10.5904/wgms-fog-2015-11) of th
 
 ### Data from other sources already uploaded to *data* folder
 - *country_codes.csv*
-- *fog_glacier_area.csv* (Used to calculated national glacier areas)
 - *fog-2015-11-front_variation.csv* (This is the version of the FV table used to generate the 2015 country profiles)
+
+### Geospatial data
+- *glims_point.gpkg*
+- *country.gpkg* (Country outlines to get national glacier area)
+- *rgi7.gpkg*
 
 ## Scripts
 
 The scripts needed are:
-- *jinja_template.py*
 - *key_stats.py*
+- *glacier_area.py*
 - *mass_balance.py*
 - *no_of_plots.py*
-- *glacier_area.py*
+- *jinja_template.py*
 
 The Python script *jinja_template.py* uses Jinja to output the plots, variables and any other parameter onto the HTML template.
 
 The HTML template is:
 - *template_country.html*
+
+## Instructions
+
+1. Make sure you have created the environment from wgms.yml if not install all packages that are used in glacier_profiles.py
+2. Download all required data files and name them as in the lists above. Place the files under the /data/ folder in this subfolder of the repository
+3. Open the *key_stats.py* script in the preferred IDE application
+5. Set the working directory to the CountryProfiles folder in this repository
+6. Load the required data files directly from the data subfolder in this repository (where you placed all the downloaded files in previous steps under Data section)
+7. Run *key_stats.py*
+8. Open the *glacier_area.py* script in the preferred IDE application (working directory should still be the same)
+9. Load the required data files directly from the data subfolder in this repository (where you placed all the downloaded files in previous steps under Data section)
+10. Run *glacier_area.py*
+11. Repeat Steps 9-10 for *mass_balance.py* and *no_of_plots.py*
+12. Open the *jinja_template.py*
+13. Make sure that in the working directory folder you have the *template_country.html* file
+14. Make sure that the /text/ subfolder exists and contains the *country_profiles_text.csv* file which should be used to fill out all the written elements which are unique for each country (this part of writing the text is yet to be completed)
 
 ## Contact
 Giulio Saibene - saibene.giulio@gmail.com - [Linkedin](www.linkedin.com/in/giulio-saibene-b3a858261)
