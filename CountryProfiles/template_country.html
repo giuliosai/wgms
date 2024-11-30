@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ country_code }} Glacier Profile</title>
+    <style>
+
+              /* * {
+              outline: 1px solid orchid;
+              outline-offset: -1px;
+        } */
+
+        title{
+            font-size: 44px;
+        }
+
+        h1 {
+            font-family: 'Helvetica', sans-serif;
+            text-align: left;
+            font-size: 24px;
+            color: #2c8bc6;
+        }
+
+        h2 {
+            font-family: 'Helvetica', sans-serif;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        h3 {
+            font-family: 'Helvetica', sans-serif;
+            text-align: center;
+            margin-top: 22px;
+        }
+
+        body {
+            font-family: 'Helvetica', sans-serif;
+            text-align: left;
+            font-size: 14px;
+            display: flex
+        }
+
+        table {
+            width: 100%;
+        }
+
+        /* styling for LEFT column */
+
+        .left-column {
+            background-color: #FFFFFF;
+        }
+
+        .right-aligned-image {
+          text-align: right;
+          width: 90%;
+          margin-top: 2px;
+        }
+
+        .image-container {
+          text-align: center;
+        }
+
+        .image-container h3 {
+          margin-bottom: 0;
+        }
+
+        .bold-text {
+          font-weight: bold;
+          text-align: center;
+        }
+
+        .subplot-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .subplot-container-glims {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+
+        .vertical-label-container, .vertical-label-container-single {
+            display: flex;
+            flex-direction: column; /* sets main axis in the vertical direction instead of horizontal (row) */
+            align-items: center; /* aligns items relative to cross-axis (opposite of main axis) */
+            /* padding: 0; */
+        }
+
+        .vertical-label-container-single {
+          justify-content: center;
+          /* flex-basis: 32px; /* to match width taken by the double label boxes above */
+
+        }
+
+        .vertical-text { /* controls the No. of Obs. in double labels */
+            transform: rotate(-90deg);
+            white-space: nowrap;
+            /* position: fixed; */
+        }
+
+        .vertical-text-single, .vertical-text-sci, .vertical-text-double {
+            /* transform: rotate(-90deg); */
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            margin: 0;
+        }
+
+        .vertical-text-sci{
+          padding-top: 25px;
+          padding-right: 20px;
+        }
+
+        .vertical-text-double{ /* controls the Glacier Series text */
+          padding-bottom: 15px; /* recall that the text is rotated so bottom is top */
+          padding-top: 25px;
+          /* margin-bottom: 25px; */
+        }
+
+        /* styling for RIGHT column */
+
+        .right-column {
+            background-color: #FFFFFF;
+        }
+
+        .orange-text {
+          color: #e46b23;
+        }
+
+        .inline-text {
+          font-size: 16px;
+          color: black;
+          font-weight: normal;
+        }
+
+        .first-table th {
+            font-size: 14px;
+        }
+
+        .grey-column {
+          text-align: center;
+          background-color: rgba(145, 145, 145, 0.7);
+        }
+
+        .orange-column {
+          text-align: center;
+          background-color: rgba(227, 109, 38, 0.7);
+        }
+
+        .grey-column td {
+          border-top: 2px solid rgba(145, 145, 145, 0.7);
+          border-bottom: 2px solid rgba(145, 145, 145, 0.7);
+        }
+
+        .orange-column td {
+          border-top: 2px solid rgba(227, 109, 38, 0.7);
+          border-bottom: 2px solid rgba(227, 109, 38, 0.7);
+        }
+
+        .second-table {
+          margin-top: 15px;
+        }
+
+        .second-table th {
+            font-size: 16px;
+            color: #2c8bc6;
+            margin-top: 15px;
+            padding: 8px;
+        }
+
+        .second-table td {
+          padding: 10px;
+        }
+
+        .tiers {
+          writing-mode: vertical-rl;
+          transform: rotate(180deg);
+          text-align: center;
+          color: #2c8bc6;
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .old-version {
+            background-color: rgba(145, 145, 145, 0.7);
+        }
+
+        .new-version {
+            background-color: rgba(227, 109, 38, 0.7);
+        }
+
+        .future {
+            background-color: #93b8c7;
+        }
+
+        .column { /* two column layout */
+            padding: 20px;
+        }
+
+        .table-outline {
+          border: 4px solid rgba(252, 191, 142, 0.4); /* You can adjust the border width and color */
+          padding: 10px; /* Optional: Add some padding to make it visually appealing */
+          display: inline-block; /* Optional: Display as an inline-block to fit the content */
+          width: 98%;
+        }
+
+        .table-outline h2 {
+          margin-top: 0;
+          margin-bottom: 1;
+        }
+
+        .stripes-image{
+          width: 80%;
+          margin-top: 5px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+  <div class="column left-column">
+
+    <h1> Glacier monitoring: {{ country_name }} </h1>
+
+    <!-- <p>{{ intro_text }}</p> -->
+
+    <div class="image-container">
+
+        <h3>Front variation observations</h3>
+        <div class="subplot-container">
+          <div class="vertical-label-container">
+            <p class="vertical-text"> No. of <br> obs. </p>
+            <p class="vertical-text-double"> Glacier <br> series </p>
+          </div>
+
+          <img class="right-aligned-image" src="data:image/png;base64,{{ plot_obs_fv_bar_grid }}" alt="No of obs fronts">
+          <!-- responsive-image -->
+
+        </div>
+
+        <h3>Glaciological mass-balance measurements</h3>
+
+        <div class="subplot-container">
+          <div class="vertical-label-container">
+            <p class="vertical-text"> No. of <br>  obs. </p>
+            <p class="vertical-text-double"> Glacier <br> series </p>
+          </div>
+
+          <img class="right-aligned-image" src="data:image/png;base64,{{ plot_obs_mb_bar_grid }}" alt="No of obs MB">
+
+        </div>
+
+        <h3>Geodetic mass-balance observations (thickness changes)</h3>
+        <div class="subplot-container">
+          <div class="vertical-label-container-single">
+            <p class="vertical-text-sci" > No. of obs. </p>
+          </div>
+
+          <img class="right-aligned-image" src="data:image/png;base64,{{ plot_obs_H }}" alt="No of obs geodetic">
+
+        </div>
+
+        <h3>Glacier GLIMS inventory</h3>
+        <div class="subplot-container">
+          <div class="vertical-label-container-single">
+            <p class="vertical-text-single" > Area coverage <br> relative to RGI7 </p>
+          </div>
+
+        <img class="right-aligned-image" src="data:image/png;base64,{{ plot_glims_area }}" alt="Glacier inventories">
+
+        </div>
+
+      </div>
+
+  </div>
+
+  <div class="column right-column">
+
+      <div class = "table-outline">
+
+        <h2 class = "orange-text"> Key statistics: <span class = "inline-text">
+            comparison of the monitoring efforts before the 2015 and the 2024 FoG database versions
+          </span>
+        </h2>
+
+        Total glaciated area = {{ tot_area }} km<sup>2</sup> (RGI 7)
+
+          <table class = "first-table">
+            <tr>
+              <!-- column headings -->
+              <th></th>
+              <th colspan="2" class = "image-container">Front variations</th>
+              <th colspan="2" class = "image-container">Mass balance</th>
+              <th colspan="2" class = "image-container">Thickness change</th>
+            </tr>
+
+            <tr class = "bold-text">
+              <td></td>
+              <td class = "grey-column" >2005-13</td>
+              <td class = "orange-column" >2014-22</td>
+              <td class = "grey-column" >2005-13</td>
+              <td class = "orange-column" >2014-22</td>
+              <td class = "grey-column" >2005-13</td>
+              <td class = "orange-column" >2014-22</td>
+            </tr>
+
+            <tr>
+              <td>Area coverage [%]</td>
+              <td class = "grey-column" >{{ perc_area_fronts_0513 }}</td>
+              <td class="orange-column" >{{ perc_area_fronts_1422}}</td>
+              <td class = "grey-column" >{{ perc_area_mb_0513 }}</td>
+              <td class="orange-column" >{{ perc_area_mb_1422 }}</td>
+              <td class = "grey-column" >{{ perc_area_H_0513 }}</td>
+              <td class="orange-column" >{{ perc_area_H_1422 }}</td>
+            </tr>
+
+            <tr>
+              <td>Number of series</td>
+              <td class = "grey-column">{{ n_series_fronts_0513 }}</td>
+              <td class = "orange-column" >{{ n_series_fronts_1422 }}</td>
+              <td class = "grey-column">{{ n_series_mb_0513 }}</td>
+              <td class="orange-column" >{{ n_series_mb_1422 }}</td>
+              <td class = "grey-column">{{ n_series_change_0513 }}</td>
+              <td class="orange-column" >{{ n_series_change_1422 }}</td>
+            </tr>
+
+            <tr>
+              <td>Average length [years]</td>
+              <td class = "grey-column"> {{ len_series_fronts_0513 }}</td>
+              <td class="orange-column" >{{ len_series_fronts_1422 }}</td>
+              <td class = "grey-column"> {{ len_series_mb_0513 }} </td>
+              <td class="orange-column" > {{ len_series_mb_1422 }} </td>
+              <td class = "grey-column"> {{ len_series_change_0513 }} </td>
+              <td class="orange-column" > {{ len_series_change_1422 }} </td>
+            </tr>
+
+            <tr>
+              <td>Average number <br>
+                of observations</td>
+              <td class = "grey-column"> {{ avg_obs_fronts_0513 }}</td>
+              <td class="orange-column" > {{ avg_obs_fronts_1422 }} </td>
+              <td class = "grey-column"> {{ avg_obs_mb_0513 }} </td>
+              <td class="orange-column" > {{ avg_obs_mb_1422 }} </td>
+              <td class = "grey-column"> {{ avg_obs_change_0513 }} </td>
+              <td class="orange-column" > {{ avg_obs_change_1422 }} </td>
+            </tr>
+
+          </table>
+
+        </div>
+
+      <div class = "second-table">
+    <!-- Tiers evaluation table -->
+      <table class = "second-table">
+        <tr>
+          <th></th>
+          <th> State in 2015 </th>
+          <th> Change by 2024 </th>
+          <th> Future potential/needs </th>
+        </tr>
+
+        <tr>
+          <td class="tiers"> Tier 1 </td>
+          <td class="old-version"> {{ tier1_past_text }} </td>
+          <td class="new-version"> {{ tier1_present_text }} </td>
+          <td class="future"> {{ tier1_future_text }} </td>
+        </tr>
+
+        <tr>
+          <td class="tiers"> Tier 2 </td>
+          <td class="old-version"> {{ tier2_past_text }} </td>
+          <td class="new-version"> {{ tier2_present_text }} </td>
+          <td class="future"> {{ tier2_future_text }} </td>
+        </tr>
+
+        <tr>
+          <td class="tiers"> Tier 3 </td>
+          <td class="old-version"> {{ tier3_past_text }} </td>
+          <td class="new-version"> {{ tier3_present_text }} </td>
+          <td class="future"> {{ tier3_future_text }} </td>
+        </tr>
+
+        <tr>
+          <td class="tiers"> Tier 4 </td>
+          <td class="old-version"> {{ tier4_past_text }} </td>
+          <td class="new-version"> {{ tier4_present_text }} </td>
+          <td class="future"> {{ tier4_future_text }} </td>
+        </tr>
+
+        <tr>
+          <td class="tiers"> Tier 5 </td>
+          <td class="old-version"> {{ tier5_past_text }} </td>
+          <td class="new-version"> {{ tier5_present_text }} </td>
+          <td class="future"> {{ tier5_future_text }} </td>
+        </tr>
+      </table>
+
+    </div>
+
+    <p> {{ overview_text }} </p>
+
+    <div class="image-container">
+
+      <h3>Annual mass-balance trends </h3>
+      <img class="stripes-image" src="data:image/png;base64,{{ plot_stripes }}" alt="Cumulative mass balance stripes">
+
+
+    </div>
+
+</body>
+
+</html>
