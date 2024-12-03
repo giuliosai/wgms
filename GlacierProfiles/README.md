@@ -4,14 +4,13 @@ I created individual glacier profiles describing the current state and historica
 
 ## Data
 
-The data used to generate the country profiles comes from the [2024 version](https://doi.org/10.5904/wgms-fog-2024-01) of the WGMS database. Most data is downloaded directly from the DBGate access of the WGMS database as the tables are better formatted. The WGMS outlines are downloaded through the PostgreSQL GIS access of the database. The *country_codes.csv* file is already provided in the data folder for this project. Please download each file and name it as named in the following lists.
+The data used to generate the country profiles comes from the [2024 version](https://doi.org/10.5904/wgms-fog-2024-01) of the WGMS database. Most data is downloaded directly from the DBGate access of the WGMS database as the tables are better formatted. The WGMS outlines are downloaded through the PostgreSQL GIS access of the database. The *country_codes.csv* file is already provided in the data folder for this project. Please download each file and name it as named in the following lists. The files can also be found in my shared folder in the WGMS shared space.
 
 ### Data needed from WGMS database zip file
 - glacier.csv
 - state.csv
 
 ### Data to download from DBGate tables as CSV files
-- glacier.csv
 - glacier_name.csv
 - glacier_photo.csv
 - glacier_country.csv
