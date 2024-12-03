@@ -1,11 +1,10 @@
 # WGMS - Giulio's repository of tasks
 
 ## Description
-Here you can find all the information about what I have worked on from Nov 2023 to Dec 2024 at the WGMS. The main two tasks I worked on are the Country Profiles and the Glacier Profiles. In each you will find:
-- The necessary input files
-- Scripts
+Here you can find all the information about what I have worked on from Nov 2023 to Dec 2024 at the WGMS. The main two tasks which are included in this repository are the Country Profiles and the Glacier Profiles. The data submission and enhancement tasks are found in the respective Google Sheets. In each of the project folders you will find:
+- The necessary input files and where to download them from
+- Scripts and HTML templates
 - Description on how to run each task
-I also worked on submitting data to the WGMS database from published scientific articles and data enhancements using the new features of the database.
 
 ## Get started
 1. Clone the repository:
