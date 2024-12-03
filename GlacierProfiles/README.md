@@ -4,7 +4,7 @@ I created individual glacier profiles describing the current state and historica
 
 ## Data
 
-The data used to generate the country profiles comes from the [2024 version](https://doi.org/10.5904/wgms-fog-2024-01) of the WGMS database. Additional data such as glacier names, countries and investigators is downloaded directly from the DBGate access of the WGMS database. The WGMS outlines are downloaded through the PostgreSQL GIS access of the database. The *country_codes.csv* file is already provided in the data folder for this project. Please download each file and name it as named in the following lists.
+The data used to generate the country profiles comes from the [2024 version](https://doi.org/10.5904/wgms-fog-2024-01) of the WGMS database. Most data is downloaded directly from the DBGate access of the WGMS database as the tables are better formatted. The WGMS outlines are downloaded through the PostgreSQL GIS access of the database. The *country_codes.csv* file is already provided in the data folder for this project. Please download each file and name it as named in the following lists.
 
 ### Data needed from WGMS database zip file
 - glacier.csv
@@ -35,13 +35,13 @@ Make sure to have the following templates in the The HTML templates used are:
 - *template_index.html*
 
 ## Instructions
-1. Make sure you have created the environment from *wgms.yml* if not install all packages that are used in *glacier_profiles.py*
+1. Make sure you have created the environment from *wgms.yml* (file found in this repository), if not install all packages that are used in *glacier_profiles.py*
 2. Download all required data files and name them as in the lists above. Place the files under the /data/ folder in this subfolder of the repository
 3. Open the *glacier_profiles.py* script in the preferred IDE application
 4. Set the working directory to the GlacierProfiles folder in this repository
 5. Load the required data files directly from the data subfolder in this repository (where you placed all the downloaded files in previous steps under *Data* section)
 6. The first cells are to run the functions used to build the visuals and extract statistics for a given glacier
-7. Before the rendering jinja template cells I find the list of glacier IDs which have the required data (photo, complete name and MB data) which is then used to output all these glacier profiles
+7. Before the rendering jinja template cells I find the list of glacier IDs (*glacier_ids_complete_sorted*) which have the required data (photo, complete name and MB data) which is then used to output all these glacier profiles
 8. The cell *Render a glacier profile* function takes a single glacier ID as input and outputs a single glacier profile for testing (no index page)
 9. The cell *Render both a glacier profile and the index home page* creates glacier profiles for a given list of glacier IDs and outputs the *glacier_index_data* which then acts as an input to the *generate_glacier_index* function to create the index.html home page
 
