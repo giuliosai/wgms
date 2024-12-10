@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset = "UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> {{name}} (ID: {{ glacier_id }}) </title>
+    <style>
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      height: 100%;
+      width: 100%;
+    }
+
+    .content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+    h1 {
+        text-align: center;
+        font-size: 36px;
+        margin: 0;
+        /* border-radius: 10px; */
+    }
+
+    .country-font{
+      font-size: 24px;
+      text-align: center;
+      margin: 0;
+    }
+
+    .title-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      color: #ffffff;
+      background-color: #a5b5d8;
+      width: 100%;
+      height: 10%;
+      margin-top: 0;
+      padding-top: 10px;
+      padding-bottom: 15px;
+      margin-bottom: 10px;
+    }
+
+    #title-text{
+      width: 95%;
+    }
+
+    .nav-button {
+        top: 1.5%;
+        font-size: 65px;
+        line-height: 65px;
+        margin-top: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+      }
+
+    .nav-button:hover {
+            color: #ccc; /* Change text color on hover */
+            text-decoration: none;
+        }
+
+    .button {
+        display: flex;
+        flex-direction: column; /* Stack icon and label vertically */
+        align-items: center;
+        justify-content: center;
+        width: 13%;
+    }
+
+    .left-button + .button-label, .right-button + .button-label {
+        font-size: 16px;
+        margin-top: 5px;
+        color: #ffffff;
+    }
+
+    .button-label-left {
+        margin-top: 5px;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+    .button-label-right {
+        margin-top: 5px;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .columns-box{
+      display: flex;
+      /* Height does not seem to change when I use % */
+      height: 78%;
+      flex: 1;
+    }
+
+    .left-column {
+            width: 50%;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            overflow: hidden;
+            z-index: 1;
+            margin-left: 20px;
+          }
+
+      #home-icon{
+        height: 60px;
+      }
+
+      #left-home{
+        margin-left: 20px;
+        width: 5%;
+      }
+
+      #right-home{
+        width: 5%;
+      }
+
+      .menu-icon {
+          width: 30px;
+          height: 25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          cursor: pointer;
+        }
+
+  /* Each line of the hamburger menu */
+      .menu-icon span {
+        display: block;
+        height: 4px;
+        background-color: white;
+        border-radius: 2px;
+        width: 100%;
+      }
+
+      .row-left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50%;
+      }
+
+      .glacier_photo {
+              max-width: 100%;
+              max-height: 100%;
+              object-fit: cover; /* Maintain aspect ratio and cover the area */
+          }
+
+      .trend-text{
+        margin-top: 20px;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      .elev-range-text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+      }
+
+      .trend-text-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 15px;
+      }
+
+      .text-row-cell-right{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 48%;
+      }
+
+      .text-row-cell-left, .text-row-cell-left-long{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+        width: 49%;
+      }
+
+      .text-row-cell-left-long{
+        width: 68%;
+      }
+
+      .blue-text{
+        color: #a5b5d8;
+      }
+
+      .length-num{
+        margin-right: 60px;
+      }
+
+      .mb-value-text{
+        text-align: right;
+      }
+
+      .small-year-text{
+        font-size: 20px;
+        text-align: left;
+      }
+
+      .static-text-area{
+        margin-top: 6px;
+        text-align: left;
+      }
+
+      .static-text-mb{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* width: 700px; */
+        width: 100%;
+        margin-top: 15px;
+      }
+
+
+    .right-column {
+            width: 50%;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            align-items: center; /* Center the contents in the horiztonal center */
+            justify-content: flex-start; /* Center the image horizontally */
+            overflow: visible; /* Hide any overflow content */
+            z-index: 2; /* Bring to front */
+          }
+
+    .row-right{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      height: 50%;
+    }
+
+    .outline_img {
+            /* height: 35vh; */
+            max-height: 100%;
+            max-width: 50%;
+            /* flex: 1; */
+        }
+
+    .earth_sphere {
+            max-height: 100%;
+            max-width: 50%;
+            object-fit: cover;
+        }
+
+    .plot_img {
+            margin-top: 15px;
+            /* height: 45%; */
+        }
+
+    #mb-plot{
+      width: 565px;
+      height: 291px;
+    }
+
+    /* .investigators-text{
+      font-size: 14px;
+      text-align: center;
+      width: 80%;
+      margin-top: 10px;
+    } */
+
+    h2 {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+
+    .dim {
+      opacity: 0.4;
+    }
+
+    .footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+            width: 100%;
+            height: 10%;
+            background-color: #a5b5d8;
+            color: #e3e3e3;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            position: relative;
+            bottom: 0;
+        }
+
+    .footer-text{
+      margin: 10px;
+      line-height: 1.5;
+    }
+
+    .frac {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      letter-spacing: 0.001em;
+      text-align: center;
+      font-size: 16px;
+    }
+    .frac > span {
+        display: block;
+        padding: 0.1em;
+    }
+    .frac span.bottom {
+        border-top: thin solid black;
+    }
+    .frac span.symbol {
+        display: none;
+    }
+
+
+    </style>
+
+</head>
+
+<body>
+
+  <div class = "content">
+
+    <div class = "title-box">
+
+        <!-- Left Button (Previous Glacier) -->
+      <div class="button">
+          <a href="{{prev_id}}.html" class="nav-button left-button">&#9664;</a>
+          <p class="button-label-left">Previous glacier</p>
+      </div>
+
+      <div id = "left-home">
+        <a href="index.html">
+          <!-- <img src = "/Volumes/shared/group/wgms_guest/2023_GiulioSaibene/glacier_profiles/menu_grid_white.png" id = 'home-icon'> -->
+          <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </a>
+      </div>
+
+      <div id = 'title-text'>
+
+        <h1>{{name}}</h1>
+
+        <p class="country-font">{{country}}</p>
+
+      </div>
+
+      <div id = 'right-home'>
+        <a href="index.html">
+          <!-- <img src = "/Users/giuliosaibene/Desktop/University/UZH/WGMS/glacier_profiles/assets/menu_grid_white.png" id = 'home-icon'> -->
+          <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Right Button (Next Glacier) -->
+      <div class="button">
+          <a href="{{next_id}}.html" class="nav-button right-button">&#9654;</a>
+          <p class="button-label-right">Next glacier</p>
+      </div>
+
+    </div>
+
+
+    <div class = "columns-box">
+
+      <div class = 'left-column'>
+
+        <div class = 'row-left'>
+
+          <img src = {{photo_url}} class = "glacier_photo">
+
+        </div>
+
+        <div class = "trend-text">
+
+          <div class = 'elev-range-text{% if lower_elev == '—' %} dim {% endif %}'>
+
+            <div> <strong> <span style="color: #A5B5D8;"> Elevation range </span> </strong> &nbsp;&nbsp;&nbsp; {{lower_elev}} — {{upper_elev}} m </div>
+            <div class = 'small-year-text'> {{length_year}} </div>
+
+          </div>
+
+          <!-- create a table for static info -->
+          <div class = 'trend-text-row'>
+
+            <div class = 'text-row-cell-left{% if glacier_length == '—' %} dim {% endif %}'>
+
+              <div>
+
+                <div> <span class = 'blue-text'> <strong> Length </strong> </span> &nbsp;&nbsp;&nbsp; {{glacier_length}} km </div>
+                <div class = 'small-year-text'> {{length_year}} </div>
+
+              </div>
+
+            </div>
+
+            <div class = 'text-row-cell-right'>
+
+               <div class = 'blue-text'> <strong> Area </strong> </div>
+
+               <div class = '{% if initial_area == '—' %} dim{% endif %}'>
+
+                 <div> {{initial_area}}
+                   <span class = 'small-year-text'> km<sup>2</sup> </span>
+                 </div>
+
+                 <div class = 'small-year-text'> {{min_area_year}} </div>
+
+               </div>
+
+               <div class = '{% if final_area == '—' %} dim{% endif %}'>
+
+                 <div> {{final_area }}
+                   <span class = 'small-year-text'> km<sup>2</sup> </span>
+                 </div>
+
+                 <div class = 'small-year-text'> {{max_area_year}} </div>
+
+               </div>
+
+             </div>
+
+          </div>
+
+
+          <div class = 'trend-text-row'>
+
+            <div class = 'text-row-cell-left-long{% if mean_fv == '—' %} dim{% endif %}' >
+
+              <div id = "static-text-fv" >
+
+                <div>
+                  <span class = 'blue-text'> <strong> Length change </strong>  </span>
+                  &nbsp;&nbsp;&nbsp; <span id = 'cum-fv-value'> {{mean_fv}} <span class = 'small-year-text'> m / year </span> </span>
+                </div>
+                <div class = 'small-year-text'>  {{min_fv_year}}—{{max_fv_year}} average</div>
+
+              </div>
+
+              <!-- <div id = 'cum-fv-value'>  {{mean_fv}} <span class = 'small-year-text'> m / year </span> -->
+
+            </div>
+
+
+          </div>
+
+          <div class = 'trend-text-row'>
+
+            <!-- <div class = 'text-row-cell-left-long' > -->
+
+                <div>
+
+                  <div>
+                    <span class = 'blue-text'> <strong> Mass balance </strong> </span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class = 'mb-value-text'> {{mean_mb}} <span class = 'small-year-text'> m / year (water equivalent) </span> </span>
+                  </div>
+
+                  <div class = 'small-year-text'> {{min_mb_year}}—{{max_mb_year}} average </div>
+
+                </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class = "right-column">
+
+        <div class = 'row-right'>
+
+            <img src="data:image/png;base64,{{ glacier_outline }}" class = "outline_img" id="outlineImage" alt="Glacier outline">
+
+            <img src="data:image/png;base64,{{ earth_sphere }}" class = "earth_sphere" alt="Earth sphere">
+
+        </div>
+
+        <div class ='plot_img'>
+
+          <img src="data:image/png;base64,{{ plot_cum_mb }}" id = 'mb-plot'>
+          <!-- {{ interactive_plot_cum_mb | safe}} -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+   <div class = 'footer'>
+
+     <p class = "footer-text"> <strong> Investigator(s): </strong>  {{investigators}} ·
+         <strong> Photo credit: </strong> {{photographer}} ({{photo_year}}) ·
+         <strong> Data source: </strong> WGMS FoG database version 2024-01-23 DOI: https://doi.org/10.5904/wgms-fog-2024-01
+
+     </p>
+
+   </div>
+
+  </div>
+
+</body>
+
+</html>
