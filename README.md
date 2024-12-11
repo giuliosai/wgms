@@ -13,7 +13,8 @@ Here you can find all the information about what I have worked on from Nov 2023 
    ```
 2. This repository uses Anaconda dependencies manager, so to install the environment used access the wgms.yml file in this repository and run:
    ```bash
-   conda env create -f wgms.yml
+   conda env create --file wgms.yml
+   conda activate giulio
    ```
 3. Navigate to the desired folder project to find more information regarding running a specific project.
 
