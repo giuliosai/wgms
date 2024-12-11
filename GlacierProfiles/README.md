@@ -11,13 +11,14 @@ The data used to generate the country profiles comes from the [2024 version](htt
 - state.csv
 
 ### Data to download from DBGate tables as CSV files
-- glacier_name.csv
-- glacier_photo.csv
-- glacier_country.csv
-- mass_balance.csv
+- bibliography.csv
 - front_variation.csv
-- team_member.csv
+- glacier_country.csv
+- glacier_name.csv
 - glacier_outline_all.csv
+- glacier_photo.csv
+- mass_balance.csv
+- team_member.csv
 
 ### Data to download from GIS access to database
 - wgms_outlines.shp

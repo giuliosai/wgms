@@ -10,26 +10,30 @@ The data from the [2015 version](https://doi.org/10.5904/wgms-fog-2015-11) of th
 
 ### Data from 2015 database version
 - *WGMS-FoG-2015-11-A-GENERAL-INFORMATION.csv*
-- *WGMS-FoG-2015-11-RR-RECONSTRUCTION-FRONT-VARIATION.csv*
-- *WGMS-FoG-2015-11-E-MASS-BALANCE-OVERVIEW.csv*
 - *WGMS-FoG-2015-11-D-CHANGE.csv*
+- *WGMS-FoG-2015-11-E-MASS-BALANCE-OVERVIEW.csv*
+- *WGMS-FoG-2015-11-RR-RECONSTRUCTION-FRONT-VARIATION.csv*
 
 ### Data from 2024 database version
-- *front_variation.csv*
-- *reconstruction_front_variation.csv*
-- *mass_balance.csv*
-- *mass_balance_overview.csv*
 - *change.csv*
+- *front_variation.csv*
 - *glacier.csv*
+- *mass_balance_overview.csv*
+- *mass_balance.csv*
+- *reconstruction_front_variation.csv*
 
 ### Data from other sources already uploaded to *data* folder
 - *country_codes.csv*
 - *fog-2015-11-front_variation.csv* (This is the version of the FV table used to generate the 2015 country profiles)
 
 ### Geospatial data
-- *glims_point.gpkg* (accessed through the QGIS integration of the database)
 - *country.gpkg* (Country outlines to get national glacier area)
+- *glims_point.gpkg* (accessed through the QGIS integration of the database)
 - *rgi7.gpkg* ([source](https://nsidc.org/data/nsidc-0770/versions/7))
+
+### Other data
+- *fog_glacier_area.csv*
+- *wgi.csv* ([source](https://nsidc.org/data/glacier_inventory/))
 
 ## Scripts
 
