@@ -26,6 +26,8 @@ from matplotlib_scalebar.scalebar import ScaleBar
 import os
 from datetime import datetime
 
+# Enable matplotlib interactive mode to prevent plots from blocking the script
+plt.ion()
 
 # Relative file paths to repository (make sure to set working directory to repository GlacierProfiles folder!!)
 

@@ -25,6 +25,8 @@ from key_stats import *
 from mass_balance import *
 from no_of_plots import *
 from glacier_area import *
+
+# Enable matplotlib interactive mode to prevent plots from blocking the script
 plt.ion()
 
 #%%
