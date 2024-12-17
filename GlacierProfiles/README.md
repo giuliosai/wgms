@@ -23,6 +23,10 @@ The data used to generate the country profiles comes from the [2024 version](htt
 ### Data to download from GIS access to database
 - wgms_outlines.shp
 
+### Data already provided in the "data" subfolder
+- *country_codes.csv*
+- *land_shallow_topo_2048.jpg*
+
 ## Scripts
 
 The script used to generate the glacier profiles is:
