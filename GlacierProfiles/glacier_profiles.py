@@ -616,7 +616,7 @@ def interactive_plot_cum_mb(glacier_id):
     fig.update_layout(
 
         title=dict(
-            text="Cumulative Mass Balance (m w.e.)",
+            text="Cumulative mass balance (m w.e.)",
             x=0.5,
             xanchor='center',
             font=dict(size=20, family = "Arial", color = 'black')
@@ -711,7 +711,7 @@ def interactive_plot_cum_mb(glacier_id):
             fig.update_layout(
 
                 title=dict(
-                    text="Cumulative Mass Balance (m w.e.)",
+                    text="Cumulative mass balance (m w.e.)",
                     x=0.5,
                     xanchor='center',
                     font=dict(size=20, family = "Arial", color = 'black')
@@ -757,7 +757,7 @@ def interactive_plot_cum_mb(glacier_id):
             fig.update_layout(
 
                 title=dict(
-                    text="Cumulative Mass Balance (m w.e.)",
+                    text="Cumulative mass balance (m w.e.)",
                     x=0.5,
                     xanchor='center',
                     font=dict(size=20, family = "Arial", color = 'black')
@@ -803,7 +803,7 @@ def interactive_plot_cum_mb(glacier_id):
             fig.update_layout(
 
                 title=dict(
-                    text="Cumulative Mass Balance (m w.e.)",
+                    text="Cumulative mass balance (m w.e.)",
                     x=0.5,
                     xanchor='center',
                     font=dict(size=20, family = "Arial", color = 'black')
@@ -949,7 +949,7 @@ def plot_cum_mb(glacier_id):
     ax.spines[['right', 'top']].set_visible(False)
 
     # Add a title
-    ax.set_title("Cumulative Mass Balance (m w.e.)", fontsize=16, family="Arial", color="black")
+    ax.set_title("Cumulative mass balance (m w.e.)", fontsize=16, family="Arial", color="black")
 
     # Adjust margins for aesthetics
     plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
