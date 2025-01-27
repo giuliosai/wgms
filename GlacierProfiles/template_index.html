@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <title> Glacier Profiles Index </title>
+
+  <style>
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    width: 100%;
+  }
+
+  h2{
+    color: #a5b5d8;
+    font-size: 18px;
+  }
+
+  p{
+    color: #808080;
+  }
+
+  #title-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    background-color: #a5b5d8;
+    width: 100%;
+    height: 10%;
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+  }
+
+  #main-title{
+    margin-bottom: 3px;
+  }
+
+  #subtitle-text{
+    text-align: center;
+    color: #ffffff;
+    font-size: 19px;
+    margin-top: 3px;
+  }
+
+    #main{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 16px;
+    }
+
+    #glacier{
+      text-align: center;
+      width: 300px;
+      height: 400px;
+    }
+
+    #glacier a {
+      text-decoration: none; /* Remove underline from links */
+      color: inherit; /* Inherit text color */
+    }
+
+    #glacier-name{
+      /* height: 5%; */
+      width: 100%;
+    }
+
+    #country_name{
+      margin: 3px;
+    }
+
+    #glacier-photos{
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div id = "title-box">
+
+    <div id = 'title-text'>
+
+      <h1 id = 'main-title'> Glacier Profiles </h1>
+
+      <p id = 'subtitle-text'> Select a glacier </p>
+
+    </div>
+
+  </div>
+
+  <div id = "main">
+
+      {% for glacier in glacier_data | sort(attribute='country') %}
+          <div id = "glacier">
+
+            <a href="{{ glacier.id }}.html">
+
+              <div id = 'glacier-name'>
+                <h2> {{ glacier.name_eng }} </h2>
+              </div>
+
+              <img src="{{ glacier.photo_url }}" id = "glacier-photos" alt="Photo of {{ glacier.name_eng }}">
+
+              <p id = "country_name" >{{ glacier.country }}</p>
+
+            </a>
+
+          </div>
+      {% endfor %}
+
+  </div>
+
+</body>
+
+</html>
